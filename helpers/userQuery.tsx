@@ -7,7 +7,7 @@ import { useQuery } from "@tanstack/react-query";
  * @returns user, error, isLoading
  */
 export const getUser = (
-  params: { slug: string } | { slug: string; id: string }
+  params: { slug: string } | { slug: string; id: string },
 ) => {
   const {
     data: user,
@@ -55,4 +55,3 @@ export const getUserPermission = (userRole: string) => {
 
   return { userPermission, isLoading, error };
 };
-

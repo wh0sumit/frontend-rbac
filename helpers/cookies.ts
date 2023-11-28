@@ -56,4 +56,3 @@ function deleteCookie(cookieName: string) {
 }
 
 export { getCookie, setCookie, cookieExists, deleteCookie };
-

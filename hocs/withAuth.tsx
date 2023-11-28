@@ -28,7 +28,7 @@ const rbac = {
 
 const withAuth = <T extends object>(
   WrappedComponent: React.ComponentType<T>,
-  particularUserRole: string
+  particularUserRole: string,
 ) => {
   const AuthComponent = (props: T) => {
     const router = useRouter();
@@ -83,4 +83,3 @@ const withAuth = <T extends object>(
 };
 
 export { withAuth, ROLES, rbac };
-

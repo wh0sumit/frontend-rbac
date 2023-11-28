@@ -14,7 +14,7 @@ type ResponseData = {
  */
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ResponseData>
+  res: NextApiResponse<ResponseData>,
 ) {
   const { method } = req;
   switch (method) {
@@ -37,7 +37,7 @@ export default function handler(
  */
 const getUserPermission = (
   req: NextApiRequest,
-  res: NextApiResponse<ResponseData>
+  res: NextApiResponse<ResponseData>,
 ) => {
   const { slug } = req.query;
   const data = permissionsData.find((userPerm) => userPerm.role == slug);
@@ -52,4 +52,3 @@ const getUserPermission = (
     });
   }
 };
-

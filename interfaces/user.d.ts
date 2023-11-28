@@ -10,4 +10,3 @@ declare interface UserType {
 declare interface UserPermissionType {
   permissions: string[];
 }
-

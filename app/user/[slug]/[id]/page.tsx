@@ -16,4 +16,3 @@ const EditPage = () => {
 };
 
 export default withAuth(EditPage, ROLES.USER);
-

@@ -1,26 +1,26 @@
 [
-     {
-          "name": "sumit",
-          "age": 23,
-          "city": "delhi",
-          "state": "delhi",
-          "country": "india",
-          "role": "user"
-     },
-     {
-          "name": "yash",
-          "age": 21,
-          "city": "indore",
-          "state": "madhya pradesh",
-          "country": "india",
-          "role": "user"
-     },
-     {
-          "name": "guest",
-          "age": 21,
-          "city": "indore",
-          "state": "madhya pradesh",
-          "country": "india",
-          "role": "guest"
-     }
+  {
+    "name": "sumit",
+    "age": 23,
+    "city": "delhi",
+    "state": "delhi",
+    "country": "india",
+    "role": "user"
+  },
+  {
+    "name": "yash",
+    "age": 21,
+    "city": "indore",
+    "state": "madhya pradesh",
+    "country": "india",
+    "role": "user"
+  },
+  {
+    "name": "guest",
+    "age": 21,
+    "city": "indore",
+    "state": "madhya pradesh",
+    "country": "india",
+    "role": "guest"
+  }
 ]

@@ -30,4 +30,3 @@ const ViewContainer: React.FC<ViewContainerProps> = ({
 );
 
 export default ViewContainer;
-

@@ -14,7 +14,7 @@ type ResponseData = {
  */
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ResponseData>
+  res: NextApiResponse<ResponseData>,
 ) {
   const { method } = req;
   switch (method) {
@@ -50,4 +50,3 @@ const getUser = (req: NextApiRequest, res: NextApiResponse<ResponseData>) => {
     });
   }
 };
-

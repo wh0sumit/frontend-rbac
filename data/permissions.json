@@ -1,24 +1,14 @@
 [
-     {
-          "role": "admin",
-          "permission": [
-               "read",
-               "write",
-               "update",
-               "delete"
-          ]
-     },
-     {
-          "role": "user",
-          "permission": [
-               "read",
-               "write"
-          ]
-     },
-     {
-          "role": "guest",
-          "permission": [
-               "read"
-          ]
-     }
+  {
+    "role": "admin",
+    "permission": ["read", "write", "update", "delete"]
+  },
+  {
+    "role": "user",
+    "permission": ["read", "write"]
+  },
+  {
+    "role": "guest",
+    "permission": ["read"]
+  }
 ]
