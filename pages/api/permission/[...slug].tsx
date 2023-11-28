@@ -1,11 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import permissionsData from "../../../data/permissions.json";
+import permissionsData from "@/data/permissions.json";
 
 type ResponseData = {
   message: string;
   permissions?: string[] | null;
 };
 
+/**
+ *
+ * @param req
+ * @param res
+ * @returns  message | permissions
+ */
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>
@@ -21,6 +27,14 @@ export default function handler(
   }
 }
 
+/**
+ * @param req
+ * @param res
+ * @returns permissions, message
+ * @description get user permission based on role
+ * @example http://localhost:3000/api/permission/admin
+ * @example http://localhost:3000/api/permission/user
+ */
 const getUserPermission = (
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>

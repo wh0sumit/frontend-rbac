@@ -1,6 +1,11 @@
 "use client";
 import { useQuery } from "@tanstack/react-query";
 
+/**
+ *
+ * @param params
+ * @returns user, error, isLoading
+ */
 export const getUser = (
   params: { slug: string } | { slug: string; id: string }
 ) => {
@@ -26,6 +31,11 @@ export const getUser = (
   return { user, error, isLoading };
 };
 
+/**
+ *
+ * @param userRole
+ * @returns userPermission, isLoading, error
+ */
 export const getUserPermission = (userRole: string) => {
   const {
     data: userPermission,

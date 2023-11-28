@@ -6,6 +6,12 @@ type ResponseData = {
   user?: UserType | null;
 };
 
+/**
+ *
+ * @param req
+ * @param res
+ * @returns  message | user
+ */
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>
@@ -21,6 +27,15 @@ export default function handler(
   }
 }
 
+/**
+ *
+ * @param req
+ * @param res
+ * @returns user, message
+ * @description get user details based on name
+ * @example http://localhost:3000/api/user/Sumit
+ * @example http://localhost:3000/api/user/Yash
+ */
 const getUser = (req: NextApiRequest, res: NextApiResponse<ResponseData>) => {
   const { slug } = req.query;
   const user = users.find((user) => user.name == slug);

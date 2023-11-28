@@ -3,7 +3,6 @@
 import { UserProfile } from "@/components/sections/user-profile";
 import { getCookie } from "@/helpers/cookies";
 import { getUser, getUserPermission } from "@/helpers/userQuery";
-import { withAuth, ROLES } from "@/hocs/withAuth";
 
 const ProfilePage = ({
   params,
@@ -15,7 +14,6 @@ const ProfilePage = ({
   const { user, error, isLoading } = getUser(params);
   const userRole = getCookie("userRole");
   const { userPermission } = getUserPermission(userRole);
-  console.log("userPermission", userPermission);
   if (isLoading) {
     return <div>Loading...</div>;
   }

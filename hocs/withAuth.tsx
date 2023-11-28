@@ -8,10 +8,23 @@ const ROLES = {
   USER: "user",
 };
 
+/**
+ * @description Role Based Access Control
+ * @example ["/[slug]/edit-profile", "/[slug]"]
+ */
 const rbac = {
   [ROLES.GUEST]: ["/[slug]"],
   [ROLES.USER]: ["/[slug]/edit-profile", "/[slug]"],
 };
+
+/**
+ * @description HOC for authentication
+ * @param WrappedComponent
+ * @param particularUserRole
+ * @returns AuthComponent | null
+ * @example withAuth(UserProfile, ROLES.USER) // UserProfile component will be accessible only for user role
+ * @example withAuth(UserProfile, ROLES.ADMIN) // UserProfile component will be accessible only for admin role
+ */
 
 const withAuth = <T extends object>(
   WrappedComponent: React.ComponentType<T>,
@@ -34,13 +47,10 @@ const withAuth = <T extends object>(
     });
 
     const newUrl = `/${slugName}${urlID ? `/${urlID}` : ""}`;
+
     useEffect(() => {
       const userRole = getCookie("userRole");
-
       if (userRole) {
-        console.log("userRole", userRole);
-        console.log("allowedRoles", newAllowedRoles, allowedRoles);
-        console.log("newUrl", newUrl);
         if (!newAllowedRoles.includes(newUrl)) {
           router.push(`/user/${slugName}`);
         }

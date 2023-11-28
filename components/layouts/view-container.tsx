@@ -6,6 +6,16 @@ interface ViewContainerProps {
   attr?: React.HTMLAttributes<HTMLDivElement>;
 }
 
+/**
+ *
+ * @param children
+ * @param className
+ * @param attr
+ * @returns ViewContainer
+ * @description View Container Component
+ * @example <ViewContainer>...</ViewContainer>
+ * @example <ViewContainer className="bg-gray-100">...</ViewContainer>
+ */
 const ViewContainer: React.FC<ViewContainerProps> = ({
   children,
   className,
